@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Rick';
+  src: url('/font/get_schwifty.ttf') format('truetype');
+}
+body {
+  background-image: url(./img/rick-morty-23.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.Loader {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.Loader img {
+  max-width: 60vw;
+  animation: spin-anim 12s linear infinite;
+  border-radius: 50%
+}
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.location__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  gap: 15px;
+}
+.location__container > p {
+  text-align: center;
+  font-family: 'Rick', sans-serif;
+  font-size: 100px;
+  background: #c82b76;
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.location__container .info {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  background: #148f49;
+  color: white;
+  padding: 5px 30px;
+  border-radius:20px 20px;
+}
+.search__input input {
+  border: 4px solid #0eff9d;
+  color: #2a2323;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  padding: 10px;
+  border-radius: 80px / 160px;
+}
+.search__options {
+  background: #fbfcf3;
+  padding:0 10px;
+  border-radius: 20px / 40px 40px;
+}
+.cards {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.resident__info {
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 4px solid white;
+}
+.resident__info img {
+  width: 100%;
+  border-radius: 20px;
+}
+.resident__info .name {
+  text-align: start;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;
+}
+.alive {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(20 250 81) 100%);
+  opacity: 1.25;
+}
+.unknown {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(234, 255, 0) 100%);
+  opacity: 1;
+}
+.dead {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(250 38 243) 100%);
+  opacity: 1;
+}
