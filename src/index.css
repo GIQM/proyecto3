@@ -6,7 +6,8 @@
   src: url('/font/get_schwifty.ttf') format('truetype');
 }
 body {
-  background-image: url(./img/rick-morty-23.webp);
+  /* background-image: url(./img/rick-morty-23.webp); */
+  background-image: url(./src/img/rick-morty-23.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
